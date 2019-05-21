@@ -33,3 +33,9 @@ var minhaClasse = new TodoList();
 document.getElementById("btn").onclick = function () {
   minhaClasse.addTodo();
 };
+
+var arr = [1, 2, 3, 4];
+var newArr = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArr);
