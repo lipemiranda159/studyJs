@@ -39,3 +39,14 @@ var newArr = arr.map(function (item) {
   return item * 2;
 });
 console.log(newArr);
+var usuario = {
+  nome: "Felipe",
+  idade: 28,
+  endereco: {
+    cidade: "bh",
+    estado: "mg"
+  }
+};
+var nome = usuario.nome,
+    cidade = usuario.endereco.cidade;
+console.log(nome + " " + cidade);

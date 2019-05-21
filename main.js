@@ -24,3 +24,16 @@ const newArr = arr.map((item) => {
 });
 
 console.log(newArr);
+
+const usuario = {
+    nome: "Felipe",
+    idade: 28,
+    endereco: {
+        cidade: "bh",
+        estado: "mg"
+    }
+}
+
+const { nome, endereco: { cidade } } = usuario;
+
+console.log(nome + " " + cidade);
