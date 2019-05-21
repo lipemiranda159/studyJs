@@ -19,7 +19,7 @@ document.getElementById("btn").onclick = function() {
 
 const arr = [1, 2, 3, 4];
 
-const newArr = arr.map(function(item) {
+const newArr = arr.map((item) => {
     return item * 2;
 });
 
