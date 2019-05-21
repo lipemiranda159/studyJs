@@ -18,6 +18,7 @@ document.getElementById("btn").onclick = function() {
 }
 
 const arr = [1, 2, 3, 4];
+const arr2 = [5, 6, 7, 8];
 
 const newArr = arr.map((item) => {
     return item * 2;
@@ -37,3 +38,8 @@ const usuario = {
 const { nome, endereco: { cidade } } = usuario;
 
 console.log(nome + " " + cidade);
+
+console.log(...arr);
+
+const arr3 = [...arr, ...arr2];
+console.log(arr3);

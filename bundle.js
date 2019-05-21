@@ -1,5 +1,7 @@
 "use strict";
 
+var _console;
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -35,6 +37,7 @@ document.getElementById("btn").onclick = function () {
 };
 
 var arr = [1, 2, 3, 4];
+var arr2 = [5, 6, 7, 8];
 var newArr = arr.map(function (item) {
   return item * 2;
 });
@@ -50,3 +53,8 @@ var usuario = {
 var nome = usuario.nome,
     cidade = usuario.endereco.cidade;
 console.log(nome + " " + cidade);
+
+(_console = console).log.apply(_console, arr);
+
+var arr3 = [].concat(arr, arr2);
+console.log(arr3);
