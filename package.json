@@ -1,12 +1,16 @@
 {
-  "name": "studyJs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/lipemiranda159/studyJs.git",
-  "author": "Felipe Miranda <lipemiranda159@hotmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/preset-env": "^7.4.4"
-  }
+    "name": "studyJs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/lipemiranda159/studyJs.git",
+    "author": "Felipe Miranda <lipemiranda159@hotmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.4",
+        "@babel/preset-env": "^7.4.4"
+    },
+    "scripts": {
+        "dev": "babel ./main.js -o ./bundle.js -w"
+    }
 }
