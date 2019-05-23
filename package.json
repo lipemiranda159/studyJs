@@ -9,10 +9,12 @@
         "@babel/cli": "^7.4.4",
         "@babel/core": "^7.4.4",
         "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
-        "@babel/preset-env": "^7.4.4"
+        "@babel/preset-env": "^7.4.4",
+        "babel-loader": "8.0.0-beta.0",
+        "webpack": "^4.32.2",
+        "webpack-cli": "^3.3.2"
     },
     "scripts": {
-        "dev": "babel ./main.js -o ./bundle.js -w",
-        "exercise": "babel ./ex1.js -o ./bundle1.js -w"
+        "dev": "webpack --mode=development -w"
     }
 }
