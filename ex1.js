@@ -92,3 +92,19 @@ function soma(...soma) {
 }
 
 console.log(soma(arr1));
+
+const usuario1 = {
+    nome: "Diego",
+    idade: 23,
+    endereco: {
+        cidade: "Rio do Sul",
+        uf: "SC",
+        pais: "Brasil"
+    }
+};
+
+const usuario2 = {...usuario1, nome: "Gabriel" };
+const usuario3 = {
+    ...usuario,
+    endereco: {...usuario1.endereco, cidade: "Lontras" }
+};
