@@ -1,0 +1,73 @@
+<hmtl>
+
+    <head>
+        <title>Estudos javaScript Exercício 1</title>
+    </head>
+
+    <body>
+
+        <div id="app"></div>
+        <button id="btn" onclick="createSquare()">Criar Quadrado</button>
+        <input type="text" name="nome">
+        <button id="btnAdd" onclick="adicionar()">Adicionar</button>
+        <script>
+            var mainDivEl = document.getElementById("app");
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            function createSquare() {
+                var squareEl = document.createElement('div');
+                squareEl.style.width = 100;
+                squareEl.style.height = 100;
+                squareEl.style.backgroundColor = '#f00';
+
+                squareEl.onmouseover = function() {
+                    squareEl.style.backgroundColor = getRandomColor();
+                }
+
+
+                mainDivEl.appendChild(squareEl);
+            }
+
+            function changeColor() {
+
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            var newColor = getRandomColor(); // #E943F0
+            var ulElement = document.createElement('ul');
+
+            function UpdateList() {
+                while (ulElement.firstChild) {
+                    ulElement.removeChild(ulElement.firstChild);
+                }
+
+                for (const nome of nomes) {
+                    var liElement = document.createElement('li');
+                    var text = document.createTextNode(nome);
+                    liElement.appendChild(text);
+                    ulElement.appendChild(liElement);
+
+                }
+                mainDivEl.appendChild(ulElement);
+            }
+            UpdateList();
+
+            function adicionar() {
+                var inputNome = document.querySelector('input[name="nome"]');
+                if (inputNome.value !== "") {
+                    nomes.push(inputNome.value);
+                    inputNome.value = "";
+                    UpdateList();
+                }
+            }
+        </script>
+
+    </body>
+</hmtl>
